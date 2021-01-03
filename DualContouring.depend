@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1609643245 source:/media/home2/vivienne/cprojects/DualContouring/main.cpp
+	<iostream>
+	"src/Octree/OctreeNode.h"
+
+1609295357 source:/media/home2/vivienne/cprojects/DualContouring/src/DualContour.cpp
+	"DualContour.h"
+
+1609293465 /media/home2/vivienne/cprojects/DualContouring/include/DualContour.h
+
+1609361223 source:/media/home2/vivienne/cprojects/DualContouring/src/QEF.cpp
+	"vector.h"
+	"QEF.h"
+
+1609361235 /media/home2/vivienne/cprojects/DualContouring/include/vector.h
+
+1609295349 /media/home2/vivienne/cprojects/DualContouring/include/QEF.h
+
+1609361361 source:/media/home2/vivienne/cprojects/DualContouring/src/vector.cpp
+	"vector.h"
+
+1609361356 source:/media/home2/vivienne/cprojects/DualContouring/src/QuadTree.cpp
+	"QuadTree.h"
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1609361251 /media/home2/vivienne/cprojects/DualContouring/include/QuadTree.h
+	"vector.h"
+
+1609361329 source:/media/home2/vivienne/cprojects/DualContouring/src/Octree.cpp
+	"Octree.h"
+
+1609362616 /media/home2/vivienne/cprojects/DualContouring/include/Octree.h
+	<vector>
+	<queue>
+	<stack>
+	"Algorithms/List.hpp"
+
+1609360789 /media/home2/vivienne/cprojects/DualContouring/include/Algorithms/List.hpp
+
+1609643041 source:/media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.cpp
+	<iostream>
+	"OctreeNode.h"
+	"../Util/Region.h"
+	"../Util/Vect3.h"
+	"../Util/States.hpp"
+
+1609642818 /media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.h
+	<vector>
+	"../Util/Vect3.h"
+	"../Util/Region.h"
+
+1609638706 /media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.h
+
+1609638908 /media/home2/vivienne/cprojects/DualContouring/src/Util/Region.h
+	"Vect3.h"
+
+1609551101 /media/home2/vivienne/cprojects/DualContouring/src/Util/States.hpp
+
+1609639152 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Region.cpp
+	"Region.h"
+
+1609552308 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.cpp
+
