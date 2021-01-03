@@ -132,8 +132,7 @@ void OctreeNode::PrintAll()
 
         if(hasChildren==false)
         {
-
-            std :: cout << "No Children" << std::endl;
+            //std :: cout << "No Children" << std::endl;
 
             return;
         }
