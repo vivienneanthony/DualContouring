@@ -127,8 +127,8 @@ void OctreeNode::PrintAll()
 {
     if(treeReady)
     {
-        std::cout << BoundRegion.Min.x << " " << BoundRegion.Min.y << " " << BoundRegion.Min.z << std::endl;
-        std::cout << BoundRegion.Max.x << " " << BoundRegion.Max.y << " " << BoundRegion.Max.z << std::endl;
+       std::cout << depth << " : Min (" << BoundRegion.Min.x << "," << BoundRegion.Min.y << "," << BoundRegion.Min.z << ")";
+       std::cout << " Max (" << BoundRegion.Max.x << "," << BoundRegion.Max.y << "," << BoundRegion.Max.z << ")" << std::endl;
 
         if(hasChildren==false)
         {
@@ -150,14 +150,14 @@ void OctreeNode::PrintAll()
 }
 
 
-void OctreeNode::PrintDepth(int inDepth)
+void OctreeNode::PrintDepth(unsigned int inDepth)
 {
     if(treeReady)
     {
         if(inDepth==depth)
         {
-            std::cout << BoundRegion.Min.x << " " << BoundRegion.Min.y << " " << BoundRegion.Min.z << std::endl;
-            std::cout << BoundRegion.Max.x << " " << BoundRegion.Max.y << " " << BoundRegion.Max.z << std::endl;
+            std::cout << "Min (" << BoundRegion.Min.x << "," << BoundRegion.Min.y << "," << BoundRegion.Min.z << ")";
+            std::cout << " Max (" << BoundRegion.Max.x << "," << BoundRegion.Max.y << "," << BoundRegion.Max.z << ")" << std::endl;
 
             return;
         }

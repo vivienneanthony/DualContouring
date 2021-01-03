@@ -59,5 +59,5 @@ public:
 
     void PrintAll();                                    // Priint everything
 
-    void PrintDepth(int inDepth);                       // Priint a specific depth for debugging
+    void PrintDepth(unsigned int inDepth);                       // Priint a specific depth for debugging
 };
