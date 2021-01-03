@@ -127,13 +127,12 @@ void OctreeNode::PrintAll()
 {
     if(treeReady)
     {
-       std::cout << depth << " : Min (" << BoundRegion.Min.x << "," << BoundRegion.Min.y << "," << BoundRegion.Min.z << ")";
-       std::cout << " Max (" << BoundRegion.Max.x << "," << BoundRegion.Max.y << "," << BoundRegion.Max.z << ")" << std::endl;
+        std::cout << depth << " : Min (" << BoundRegion.Min.x << "," << BoundRegion.Min.y << "," << BoundRegion.Min.z << ")";
+        std::cout << " Max (" << BoundRegion.Max.x << "," << BoundRegion.Max.y << "," << BoundRegion.Max.z << ")" << std::endl;
 
         if(hasChildren==false)
         {
             //std :: cout << "No Children" << std::endl;
-
             return;
         }
 
@@ -148,7 +147,6 @@ void OctreeNode::PrintAll()
     }
 
 }
-
 
 void OctreeNode::PrintDepth(unsigned int inDepth)
 {

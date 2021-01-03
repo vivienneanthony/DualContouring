@@ -15,27 +15,21 @@ int main(int argc, char *argv[])
     {
         // convert char to number
         inDepth = (unsigned int) atoi(argv[1]);
-
-        // if depth is 0 then put invalid input
-        if(inDepth==0)
-        {
-            std::cout << "Invalid Depth Input" << std::endl;
-
-            return 0;
-        }
     }
 
-
+    // Create a tree
     OctreeNode * newTree = new OctreeNode(Vect3(1.0f,1.0f,1.0f));
 
-
-
+    // set depth base on input
     int BuildDepth = inDepth;
 
+    // build tree
     newTree->BuildTree(BuildDepth);
 
+    // print results
     newTree->PrintDepth(BuildDepth);
 
+    // delete
     delete newTree;
 
     return 0;

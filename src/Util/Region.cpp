@@ -22,11 +22,10 @@ Region::~Region()
 
 }
 
-
 // returns the center region
 Vect3 Region::CalculateCenter()
 {
-    return (Max-Min)/2.0f;
+    return (Max+Min)/2.0f;
 }
 
 Vect3 Region::CalculateDimensions()
