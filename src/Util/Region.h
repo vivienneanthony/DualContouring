@@ -9,21 +9,20 @@
 class Region
 {
 public:
-    Region();
-    ~Region();
+    Region();                                                           // Constructor
+    ~Region();                                                          // Deconstructor
 
-    // Set Initial
-    Region(Vect3 inMin, Vect3 inMax);
+    Region(Vect3 inMin, Vect3 inMax);                                   // Construction region
 
     // Set Region
-    void SetRegion(Vect3 inMin, Vect3 inMax);
+    void SetRegion(Vect3 inMin, Vect3 inMax);                           // Set Region
 
-    Vect3 CalculateCenter();
+    Vect3 CalculateCenter();                                            // Calculate Center
 
-    Vect3 CalculateDimensions();
+    Vect3 CalculateDimensions();                                        // Get dimension
 
-    Vect3 Min;
-    Vect3 Max;
+    Vect3 Min;                                                          // Store mid
+    Vect3 Max;                                                          // Store max
 
 };
 

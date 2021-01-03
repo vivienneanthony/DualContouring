@@ -7,11 +7,13 @@ using namespace std;
 
 int main()
 {
-    OctreeNode * newTree = new OctreeNode();
+    OctreeNode * newTree = new OctreeNode(Vect3(1.0f,1.0f,1.0f));
 
-    newTree->BuildTree(2);
+    int BuildDepth = 4;
 
-    newTree->PrintAll();
+    newTree->BuildTree(BuildDepth);
+
+    newTree->PrintDepth(BuildDepth);
 
     delete newTree;
 

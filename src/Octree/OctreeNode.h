@@ -1,4 +1,3 @@
-
 #include <vector>
 
 #include "../Util/Vect3.h"
@@ -28,36 +27,37 @@ enum class Octant : unsigned char
 class OctreeNode
 {
 public:
-    // General constructor and deconstuctor
-    OctreeNode();
-    OctreeNode(Vect3 inMax);
+    OctreeNode();                                       // Constructor
+    OctreeNode(Vect3 inMax);                            // Constructor (InMax)
 
-    ~OctreeNode();
+    ~OctreeNode();                                      // Deconstructor
 
-    // Boundary min and maximum
-    Region BoundRegion;
+
+    Region BoundRegion;                                 // Boundary min and maximum
 
     // Parent Node
-    OctreeNode * Parent = nullptr;
+    OctreeNode * Parent = nullptr;                      // Parent
 
     // Octant quadrant
-    OctreeNode * Node[OCTANTS]; // Pointers for each octant
+    OctreeNode * Node[OCTANTS];                         // Pointers for each octant
 
     // depth preset
-    unsigned int depth = 0;
+    unsigned int depth = 0;                             // Track depth
 
     // Points in a vector
-    std::vector<PointV3>  * PointList;
+    std::vector<PointV3>  * PointList;                  // Could be used to hold vertex
 
-    unsigned char activeOctants;
+    unsigned char activeOctants;                        // Set active Octants
 
-    bool hasChildren = false;
+    bool hasChildren = false;                           // Set has children
 
-    bool treeReady = false;                             // tree ready
+    bool treeReady = false;                             // Set tree ready
 
-    void BuildTree(unsigned int indepth);               // build blank tree with no points
+    void BuildTree(unsigned int indepth);               // Build blank tree to a depth
 
-    void CalculateBounds(Octant octant);
+    void CalculateBounds(Octant octant);                // Calculate bounds
 
-    void PrintAll();
+    void PrintAll();                                    // Priint everything
+
+    void PrintDepth(int inDepth);                       // Priint a specific depth for debugging
 };

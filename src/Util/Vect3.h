@@ -66,23 +66,6 @@ public:
         return *this;
     }
 
-    /// Divide-assign a scalar.
-    Vect3& operator /=(int rhs)
-    {
-        x /= rhs;
-        y /= rhs;
-        z /= rhs;
-        return *this;
-    }
-
-    /// Divide-assign a scalar.
-    Vect3& operator /(float rhs)
-    {
-        x /= rhs;
-        y /= rhs;
-        z /= rhs;
-        return *this;
-    }
 
     /// Divide-assign a vector.
     Vect3& operator /=(const Vect3& rhs)
@@ -93,29 +76,74 @@ public:
         return *this;
     }
 
-    /// Divide-assign a vector.
-    Vect3& operator -(const Vect3& rhs)
-    {
-        x -= rhs.x;
-        y -=rhs.y;
-        z -= rhs.z;
 
+    /// Divide-assign a scalar.
+    Vect3& operator /=(const int&  rhs)
+    {
+        x /= (float)rhs;
+        y /= (float)rhs;
+        z /= (float)rhs;
         return *this;
     }
 
-    /// Divide-assign a vector.
-    Vect3& operator +(const Vect3& rhs)
+    /// Divide-assign a scalar.
+    Vect3& operator /=(const float& rhs)
     {
-        Vect3 outVect3;
-
-        x +=  rhs.x;
-        y +=  rhs.y;
-        z += rhs.z;
-
-
+        x /= rhs;
+        y /= rhs;
+        z /= rhs;
         return *this;
     }
 
+
+    /// Subtract operator / Vector
+    Vect3  operator -(const Vect3& rhs)
+    {
+        return Vect3(x-rhs.z, y-rhs.y, z-rhs.z);
+    }
+
+    /// Additonial operator / Vector
+    Vect3 operator +(const Vect3& rhs)
+    {
+        return Vect3(x+rhs.z, y+rhs.y, z+rhs.z);
+    }
+
+    /// Multiplication operator / Vector
+    Vect3  operator *(const Vect3& rhs)
+    {
+        return Vect3(x*rhs.z, y*rhs.y, z*rhs.z);
+    }
+
+    /// Divide operator / Vector
+    Vect3 operator /(const Vect3& rhs)
+    {
+        return Vect3(x/rhs.z, y/rhs.y, z/rhs.z);
+    }
+
+
+    // Divide Operator
+    Vect3 operator /(const float& rhs)
+    {
+        return Vect3(x/rhs, y/rhs, z/rhs);
+    }
+
+    // Multiplication Operator
+    Vect3 operator *(const float& rhs)
+    {
+        return Vect3(x*rhs, y*rhs, z*rhs);
+    }
+
+    // Multiplication Operator
+    Vect3 operator -(const float& rhs)
+    {
+        return Vect3(x*rhs, y*rhs, z*rhs);
+    }
+
+    // Addition Operator
+    Vect3 operator +(const float& rhs)
+    {
+        return Vect3(x+rhs, y+rhs, z+rhs);
+    }
 };
 
 
