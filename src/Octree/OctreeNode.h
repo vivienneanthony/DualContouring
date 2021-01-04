@@ -1,4 +1,5 @@
 #include <vector>
+#include <queue>
 
 #include "../Util/Vect3.h"
 #include "../Util/Region.h"
@@ -19,8 +20,10 @@ enum class Octant : unsigned char
 
 #define OCTANTS 8
 #define INITIALBOUND    512
-#define LODDEPTH      8
+#define LODDEPTH      5
 
+
+// Ability to build data from noise;
 
 
 // Child for a octree
@@ -45,7 +48,8 @@ public:
     unsigned int depth = 0;                             // Track depth
 
     // Points in a vector
-    std::vector<PointV3>  * PointList;                  // Could be used to hold vertex
+    std::vector<PointV3> PointList;                     // Could be used to hold vertex
+    std::queue<PointV3> PointListQueue;
 
     unsigned char activeOctants;                        // Set active Octants
 
@@ -59,5 +63,16 @@ public:
 
     void PrintAll();                                    // Priint everything
 
-    void PrintDepth(unsigned int inDepth);                       // Priint a specific depth for debugging
+    void PrintDepth(unsigned int inDepth);              // Priint a specific depth for debugging
+
+    void InitPointData(std::vector<PointV3> inData);    // In Data
+
+    void BuildTreeFromData();                           // Build Tree from data
+
+    void PreCalculateBounds(Octant octant, Vect3 &outMin, Vect3 &outMax);
+
+
+    void AddQueue(PointV3 inPoint);                     // Add Point to Queue for auto build tree
+
+    void PrintAllFromData();
 };

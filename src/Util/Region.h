@@ -17,6 +17,8 @@ public:
     // Set Region
     void SetRegion(Vect3 inMin, Vect3 inMax);                           // Set Region
 
+    bool InRegion(Vect3 checkVect3);                                    // UPS deliver
+
     Vect3 CalculateCenter();                                            // Calculate Center
 
     Vect3 CalculateDimensions();                                        // Get dimension

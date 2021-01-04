@@ -1,5 +1,10 @@
+// Vivienne Anthony
+// 2021
+
 #ifndef VECT3_H
 #define VECT3_H
+
+#include <cmath>
 
 // Vivienne Anthony
 // 2020
@@ -144,6 +149,11 @@ public:
     {
         return Vect3(x+rhs, y+rhs, z+rhs);
     }
+
+    float CalculateDistance(const Vect3& rhs)
+    {
+        return std::sqrt(((x-rhs.x)*(x-rhs.x))+((y-rhs.y)*(y-rhs.y))+((z-rhs.z)*(z-rhs.z)));
+    }
 };
 
 
@@ -151,15 +161,14 @@ class PointV3
 {
 public:
     // constructor and deconstructor
-    PointV3()
-    {
-        Vect3 vertex;
-        Vect3 normal;
-    };
+    PointV3() {};
+    PointV3(Vect3 inV, Vect3 inN) { v=inV; n=inN;};
 
     ~PointV3() {};
 
 
+    Vect3 v;
+    Vect3 n;
 };
 
 

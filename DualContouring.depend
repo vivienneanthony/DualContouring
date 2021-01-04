@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1609713368 source:/media/home2/vivienne/cprojects/DualContouring/main.cpp
+1609731931 source:/media/home2/vivienne/cprojects/DualContouring/main.cpp
 	<iostream>
 	"src/Octree/OctreeNode.h"
+	"src/MeshData/MeshData.h"
 
 1609295357 source:/media/home2/vivienne/cprojects/DualContouring/src/DualContour.cpp
 	"DualContour.h"
@@ -39,27 +40,43 @@
 
 1609360789 /media/home2/vivienne/cprojects/DualContouring/include/Algorithms/List.hpp
 
-1609713980 source:/media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.cpp
+1609798756 source:/media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.cpp
 	<iostream>
 	"OctreeNode.h"
 	"../Util/Region.h"
 	"../Util/Vect3.h"
 	"../Util/States.hpp"
 
-1609713368 /media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.h
+1609798924 /media/home2/vivienne/cprojects/DualContouring/src/Octree/OctreeNode.h
 	<vector>
+	<queue>
 	"../Util/Vect3.h"
 	"../Util/Region.h"
 
-1609713369 /media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.h
+1609719858 /media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.h
+	<cmath>
 
-1609704031 /media/home2/vivienne/cprojects/DualContouring/src/Util/Region.h
+1609725549 /media/home2/vivienne/cprojects/DualContouring/src/Util/Region.h
 	"Vect3.h"
 
 1609551101 /media/home2/vivienne/cprojects/DualContouring/src/Util/States.hpp
 
-1609713999 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Region.cpp
+1609732359 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Region.cpp
+	<cmath>
 	"Region.h"
 
-1609552308 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.cpp
+1609719881 source:/media/home2/vivienne/cprojects/DualContouring/src/Util/Vect3.cpp
+
+1609742493 source:/media/home2/vivienne/cprojects/DualContouring/src/MeshData/MeshData.cpp
+	<iostream>
+	"MeshData.h"
+	"../Util/Vect3.h"
+	"../Noise/FastNoiseLite.h"
+
+1609720467 /media/home2/vivienne/cprojects/DualContouring/src/MeshData/MeshData.h
+	<vector>
+	"../Util/Vect3.h"
+
+1609716673 /media/home2/vivienne/cprojects/DualContouring/src/Noise/FastNoiseLite.h
+	<cmath>
 

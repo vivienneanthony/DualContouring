@@ -35,6 +35,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="src/MeshData/MeshData.cpp" />
+		<Unit filename="src/MeshData/MeshData.h" />
+		<Unit filename="src/Noise/FastNoiseLite.h" />
 		<Unit filename="src/Octree/OctreeNode.cpp" />
 		<Unit filename="src/Octree/OctreeNode.h" />
 		<Unit filename="src/Util/Region.cpp" />
